@@ -2,27 +2,6 @@
 
 Today we are going to learn and implement a Spring Boot application. There are two types of applications: monolithic applications and microservice-based applications. For simplicity and to avoid complexity, we will create a monolithic app first and then convert it into a microservice-based application. 
 
-### Monolithic vs Microservices: Key differences
-
-| Aspect | Monolithic application | Microservice-based application |
-| --- | --- | --- |
-| Architecture | Single deployable unit containing all modules | Suite of small, independently deployable services |
-| Deployment | One artifact deployed as a whole | Each service deployed separately |
-| Scalability | Scale the entire app, even for a hotspot | Scale only the services that need capacity |
-| Data management | Often a single shared database schema | Database per service or clearly owned schemas |
-| Fault isolation | Failures can cascade and affect whole app | Failures isolated to a service; use timeouts and retries |
-| Team organization | Functionally oriented teams around a single codebase | Cross‑functional, service‑aligned teams ("you build it, you run it") |
-| Tech stack | Typically one framework and runtime | Polyglot allowed per service within guardrails |
-| Performance | In‑process calls are fast; fewer network hops | Network latency between services; requires careful API design |
-| Testing | Simpler end‑to‑end environment; unit tests may be intertwined | Service‑level tests plus contract tests; harder end‑to‑end |
-| DevOps | Simpler CI/CD and infrastructure | More pipelines, infra, and automation needed |
-| Release cadence | Whole app released together | Services release independently |
-| Operational complexity | Lower runtime complexity | Higher runtime complexity: discovery, routing, resilience |
-| Observability | Central logs and traces are simpler | Requires distributed tracing, per‑service dashboards |
-| Communication | In‑process method calls | HTTP/gRPC/events across the network |
-| Transactions | ACID across modules is straightforward | Distributed transactions avoided; use Sagas/outbox patterns |
-| Good for | Small to medium apps, early stages, simple domains | Large, complex domains requiring independent scaling and releases |
-| Trade‑offs | Fast to start, can become a "big ball of mud" over time | Flexibility and scale, but higher cost and complexity to operate |
 
 ## Creating Spring Boot Application
 
